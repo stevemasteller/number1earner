@@ -13,31 +13,56 @@
 *
 ************************************************************/
 
-// 
-//	NOTE: all constants and global variables initialized in 
-//		  the data.js file.
-//
 
-//
-// Constants
-//
+/*****************************************
+* implementSqueezePage
+*****************************************/
+var deleteAllLinks = function() {
+	$('a').remove();
+}
 
-//const MAIN_CONFERENCE 		= '0';	// Numeric constants identifying each activity.
-//const FRAMEWORKS_WORKSHOP	    = '1';  // Must correspond to index in activitesArray and order
-//const LIBRARIES_WORKSHOP	    = '2';	// displayed on form.
-//const EXPRESS_WORKSHOP		= '3';
-//const NODE_JS_WORKSHOP		= '4';
-//const BUILD_TOOLS_WORKSHOP	= '5';
-//const NPM_WORKSHOP 			= '6';
+var hideSqueezePage = function() {
+	$(document).find('.floating-container').hide();
+}
 
-//
-// Global variables
-//
+var enableLinks = function() {
+	var newLinks  = '<a href="index.html">Page 1</a>';
+		newLinks += '<a href="page2.html">Page 2</a>';
+		newLinks += '<a href="page3.html">Page 3</a>';
+		newLinks += '<a href="page4.html">Page 4</a>';
+	
+	$(document).find('h2').after(newLinks);
+}
+			
+var implementSqueezePage = function() {
+	
+	deleteAllLinks();
+	incrementPageCount();
+	
+	if (sessionStorage.pageCount < 3) {
+		
+		hideSqueezePage();
+		enableLinks();
+	}
+}
 
-// global array of objects identifying activity conflicts and prices
-// var activitiesArray = [];
-
-
+/*****************************************
+* Session
+*****************************************/
+var incrementPageCount = function() {
+    if(typeof(Storage) !== "undefined") {
+	
+			if (sessionStorage.pageCount) {
+				
+				sessionStorage.pageCount = Number(sessionStorage.pageCount) + 1;
+			} else {
+				
+				sessionStorage.pageCount = 1;
+			}
+		
+		} else {
+    }
+}
 
 /*****************************************
 * Display error messages
@@ -121,3 +146,4 @@ $('form').on('click', 'button[type="submit"]', function($event) {
 /*****************************************
 * On load
 ******************************************/
+implementSqueezePage();
