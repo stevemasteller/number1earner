@@ -15,22 +15,40 @@ select {
 
 body {
   font: 1em/1.5;
-  color: #184f68;
-  background: #accbd9;
+  color: #4b4b4b;	 
+  background-color: #eeeeee;
+  background-color: #000;
 }
 
 header {
-	text-align: center;  
+	text-align: left;  
 }
 
 h1 {
-	font-size: 2.5em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+	font-size: 1.8em;
 	margin: 0;
+	text-shadow:	0 1px 0 #ccc,   /* 3d effect */
+					0 2px 0 #c9c9c9,
+					0 3px 0 #bbb,
+					0 4px 0 #b9b9b9,
+					0 5px 0 #aaa,
+					0 6px 1px rgba(0,0,0,.1),
+					0 0 5px rgba(0,0,0,.1),
+					0 1px 3px rgba(0,0,0,.3),
+					0 3px 5px rgba(0,0,0,.2),
+					0 5px 10px rgba(0,0,0,.25),
+					0 10px 10px rgba(0,0,0,.2),
+					0 20px 20px rgba(0,0,0,.15);
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+	color: #ebebeb;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 /* ================================= 
@@ -39,7 +57,7 @@ a {
 
 form {
 	padding: .875em 1.875em 1.875em;
-	background: #85b5ca;
+	background:  #6d6d6d; 
 }
 
 fieldset,
@@ -59,9 +77,10 @@ button {
 }
 
 legend {
+	color: black; 
 	font-weight: 500;
 	padding-top: .5em;
-	border-top: 2px solid #679cb3;
+	border-top: 2px solid #858585;
 	margin-bottom: 1.125em;
 }
 
@@ -73,8 +92,10 @@ legend {
 
 label {
 	color: #000;
-	display: block;
+	font-weight: 500;
+	display: inline-block;
 	margin-bottom: .5em;
+	padding-right: 1em;
 }
 
 input,
@@ -87,20 +108,21 @@ select {
 	font-size: 1em;
 	font-weight: 500;
 	padding: .8em;
-	background: #c1deeb;
-	border: 2px solid #c1deeb;
+	background: #c5c5c5;			/* #c1deeb; */
+	border: 2px solid #535353;	/* #c1deeb; */
 	outline: none;
 }
 
 input:focus, 
 select:focus {
 	background: #fff;
-	border-color: #5e97b0;
+	border-color: #535353; /* #5e97b0; */
 	transition: border-color .4s, background-color .4s;
 }
 
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"],
+input[type="text"] {
 	display: inline-block;
 }
 
@@ -115,19 +137,29 @@ button {
 button:hover {
 	background: #184c62;
 }
+img {
+	display: block;
+	width: 100%;
+}
 
 /* ================================= 
   Page Styles
 ==================================== */
-
-.container {
-	margin: auto;
-	max-width: 680px;
+.floating-container {
+  background: url('../img/shutterstock_101815531.jpg') no-repeat center;   /* new */
+  background-size: 100%; 
+  background-position: center 6em;
+  background-color: #FFF;
 }
 
-.shirt div {
-	float: left;
-	margin-right: 0.85em;
+.container1 {
+	margin-left: 5%;
+	max-width: 680px;
+	height: 460px;
+}
+
+.container2 {
+	max-width: 680px;
 }
 
 .info div {
@@ -139,17 +171,16 @@ button:hover {
 	margin-bottom: 0;
 }
 
-.credit-card {
-	margin-top: 1.25em;
-}
-
 /* ================================= 
   Error Messages
 ==================================== */
 
 .error {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
 	color: red; 
-	margin-top: -1.125em;
+	margin-top: -1em;
 }
 
 /* ================================= 
@@ -181,7 +212,39 @@ button:hover {
 
 @media (min-width: 680px) {
 	header {
-		padding: 4.65em 0 2.5em;
+		padding: 2em 0 2.5em;
+		font-size: 1.3em;
+	}
+h1 {
+	font-size: 2.5em;
+}
+	form {
+		background:  transparent; 
+	}
+	input[type="text"],
+	input[type="email"],
+	legend {
+		width: 70%;
+	}
+	.floating-container {
+		position: fixed;
+		top: 20%;
+		height: 420px;
+		width: 100%;
+		z-index: 1;
+		background-size: 40%; 
+		background-position: center bottom;
+	}
+	.container1 {
+		height: 420px;
+	}
+	.container2 {
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin-right: 2%;
+		width: 380px;
 	}
 	.col {
 		float: left;
