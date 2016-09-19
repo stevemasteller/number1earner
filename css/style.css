@@ -65,10 +65,11 @@ a:hover {
 }
 
 .dropcap {
+	font-family: 'Roboto Slab', serif;
 	font-size: 2.9em;
 	display: block;
 	float: left;
-	width: .7em;
+	width: .8em;
 	height: .7em;
 	line-height: 1;
 	margin: 0;
