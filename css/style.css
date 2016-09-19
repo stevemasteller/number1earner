@@ -6,35 +6,60 @@
   box-sizing: border-box;
 }
 
+/* type-scale.com */
+/*   base size = 18 */
+/*   major third */
+html {
+	font-size: 1.125em;
+}
+
 body {
+	background-color: white;
 	font-family: 'Roboto', sans-serif;
-}
-
-body {
-	font-size: 1em;
-	background: #000;
-}
-
-h1 {
-	font-size: 2.5em;
-	font-weight: 800;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
-	padding: 1em;
-}
-
-h2 {
-	font-size: 1.25em;
-	padding: 0.25em;
+	font-weight: 400;
+	line-height: 1.45;
+	color: #333;
 }
 
 p {
-	padding: 0.85em;
-	line-height: 1.25em;
+	margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+	margin: 1.414em 0 0.5em;
+	font-weight: inherit;
+	line-height: 1.2;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 2.441em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+h2 {
+	font-size: 1.953em;
+}
+
+h3 {
+	font-size: 1.563em;
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+small, 
+.font_small {
+	font-size: 0.8em;
 }
 
 a {
 	text-decoration: none;
-	padding: 0.85em;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 /* ================================= 
@@ -48,8 +73,7 @@ a {
 }
 
 .wrapper-top {
-	color: #000;
-	margin-top: 5%;
+	margin-top: 15vh;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -64,7 +88,7 @@ a {
 }
 
 .wrapper-feature {
-	background-color: #8b8b8b;
+	background-color: #ababab;
 }
 
 /* Beach */
@@ -74,8 +98,8 @@ a {
 }
 
 .wrapper-beach {
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin-top: 15vh;
+	margin-bottom: 15vh;
 }
 
 /* ================================= 
@@ -129,6 +153,5 @@ a {
 		float: left;
 		max-width: 25%;
 		height: auto;
-		padding: 0.85em 0.85em 0 0.85em;
 	}
 }
