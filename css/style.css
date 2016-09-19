@@ -6,15 +6,8 @@
   box-sizing: border-box;
 }
 
-/* type-scale.com */
-/*   base size = 18 */
-/*   major third */
-html {
-	font-size: 1.125em;
-}
-
 body {
-	background-color: white;
+	background-color: #ababab;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	line-height: 1.45;
@@ -32,9 +25,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	margin-top: 0;
 	font-size: 2.441em;
+	font-weight: 500;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+	letter-spacing: -.05em;
+	
+	/* rythm */
+	margin: 0 0 .5em;
 }
 
 h2 {
@@ -47,11 +44,16 @@ h3 {
 
 h4 {
 	font-size: 1.25em;
+	margin: 0 0 1.05em;
 }
 
 small, 
 .font_small {
 	font-size: 0.8em;
+}
+
+strong {
+	font-weight: 500;
 }
 
 a {
@@ -60,6 +62,16 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+.dropcap {
+	font-size: 2.9em;
+	display: block;
+	float: left;
+	width: .7em;
+	height: .7em;
+	line-height: 0.8;
+	margin: 0;
 }
 
 /* ================================= 
@@ -73,9 +85,13 @@ a:hover {
 }
 
 .wrapper-top {
-	margin-top: 15vh;
 	margin-right: auto;
 	margin-left: auto;
+	background-color: #ababab;
+}
+
+.wrapper-opportunities {
+	background-color: #ababab;
 }
 
 /* Feature */
@@ -87,19 +103,33 @@ a:hover {
 	text-align: center;
 }
 
+.wrapper-feature h3 {
+	text-align: center;
+}
+
+.wrapper-feature h4 {
+	text-align: center;
+}
+
 .wrapper-feature {
-	background-color: #ababab;
+	max-width: 31.5rem;
+	width: 88%;
+	margin-right: auto;
+	margin-left: auto;
+
+	/* rythm */
+	padding: 4.5em 0 0 0;
+}
+
+/* add space to bottom of opportunities */
+.wrapper-feature:last-child {
+	padding: 4.5em 0;
 }
 
 /* Beach */
 #photo-beach {
 	max-width: 100%;
 	max-height: auto;
-}
-
-.wrapper-beach {
-	margin-top: 15vh;
-	margin-bottom: 15vh;
 }
 
 /* ================================= 
@@ -120,7 +150,14 @@ a:hover {
   Media Queries
 ==================================== */
 
-@media (min-width: 0) and (max-width: 679px) {
+@media (min-width: 0) and (max-width: 41em) {
+	/* type-scale.com */
+	/*   base size = 18 */
+	/*   major third */
+	html {
+		font-size: 0.875em;
+	}
+
 	/* ================================= 
 		Page Styles
 	==================================== */
@@ -131,11 +168,17 @@ a:hover {
 	}
 }
 
-@media (min-width: 680px) {
+@media (min-width: 42em) {
 	/* ================================= 
 		Page Styles
 	==================================== */
-	
+	/* type-scale.com */
+	/*   base size = 18 */
+	/*   major third */
+	html {
+		font-size: 1.125em;
+	}
+
 	/* Sidebars */
 	body {
 		background-image: url(../img/photo-water.jpg);
@@ -144,14 +187,23 @@ a:hover {
 	}
 	
 	.wrapper-top {
-		max-width: 80%
+		margin-top: 15vh;
+		max-width: 70%
 	}
 	
 	/* feature */
 	.wrapper-feature #photo-money1,
 	.wrapper-feature #photo-money2 {
-		float: left;
-		max-width: 25%;
+		float: right;
+		max-width: 50%;
 		height: auto;
+		margin-left: 1.5em;
 	}
+	
+	/* beach */
+	.wrapper-beach {
+		margin-top: 15vh;
+		margin-bottom: 15vh;
+	}
+
 }
