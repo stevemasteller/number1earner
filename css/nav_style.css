@@ -158,10 +158,6 @@ a:hover {
 	html {
 		font-size: 0.875em;
 	}
-	
-	.main-header {
-		font-size: 1.125em;		
-	}
 
 	/* ================================= 
 		Page Styles
@@ -233,9 +229,6 @@ a:hover {
 	align-self: center;
 	font-size: 1.8em;
 	color: #fff;	 
-	background-color: #797e83;
-	padding: 0.3em;
-	border-radius: .5em;
 	text-shadow:	0 1px 0 #ccc,   /* 3d effect */
 					0 2px 0 #c9c9c9,
 					0 3px 0 #bbb,
@@ -317,5 +310,3 @@ a:hover {
 		margin-right: .65em;
 	}
 }
-
-
