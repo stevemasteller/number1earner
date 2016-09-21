@@ -311,4 +311,226 @@ a:hover {
 	}
 }
 
+/* ================================= 
+  Form Element Styles
+==================================== */
+
+form {
+	padding: .875rem 1.875rem 1.875rem;
+	background:  #6d6d6d; 
+}
+
+fieldset,
+button.submit {
+	padding: 0;
+	border: none;
+}
+
+fieldset {
+	margin-top: 1.5rem;
+}
+
+button.submit {
+	font-size: 1.25rem;	
+}
+
+input[type="text"],
+input[type="email"] {
+	width: 100%;
+}
+
+label {
+	color: #000;
+	font-weight: 500;
+	display: inline-block;
+	margin-bottom: .5rem;
+	padding-right: 1rem;
+}
+
+input {
+	margin-bottom: 1.125rem;	
+	font-size: 1rem;
+	font-weight: 500;
+	padding: .8em;
+	background: #c5c5c5;			
+	border: 2px solid #535353;
+	outline: none;
+}
+
+input:focus {
+	background: #fff;
+	border-color: #535353; 
+	transition: border-color .4s, background-color .4s;
+}
+
+input[type="text"] {
+	display: inline-block;
+}
+
+button.submit {
+	color: #fff;
+	padding: .55rem 1.25rem;
+	background: #22627e;
+	cursor: pointer;
+}
+
+button.submit:hover {
+	background: #184c62;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+/* ================================= 
+  Squeeze page
+==================================== */
+.container1 {
+	margin-left: 5%;
+	max-width: 680px;
+}
+
+.container2 {
+	max-width: 680px;
+}
+
+.info div {
+	float: left;
+	margin-right: 0.85rem;
+}
+
+.interests input {
+	margin-bottom: 0;
+}
+
+.container1 h1 {
+	font-size: 1.8rem;
+	margin: 0;
+	text-shadow:	0 1px 0 #ccc,   /* 3d effect */
+					0 2px 0 #c9c9c9,
+					0 3px 0 #bbb,
+					0 4px 0 #b9b9b9,
+					0 5px 0 #aaa,
+					0 6px 1px rgba(0,0,0,.1),
+					0 0 5px rgba(0,0,0,.1),
+					0 1px 3px rgba(0,0,0,.3),
+					0 3px 5px rgba(0,0,0,.2),
+					0 5px 10px rgba(0,0,0,.25),
+					0 10px 10px rgba(0,0,0,.2),
+					0 20px 20px rgba(0,0,0,.15);
+}
+
+button.opt-out {
+	padding: .55rem 0.85rem;
+	border-radius: 30%;
+	cursor: pointer;
+	background-color: #fff;
+	border: none;
+	font-size: 1.5rem;
+	position: absolute;
+}
+
+button.opt-out:hover {
+	background-color: #c5c5c5;
+}
+
+.floating-container {
+	display: none;
+}
+
+/* ================================= 
+  Squeeze Page Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 679px) {
+	.floating-container {
+		background: url('../img/shutterstock_101815531.jpg') no-repeat center; 
+		background-size: 40%;
+		background-position:  right top;
+		background-color: #fff;
+		height: 100vh;
+		position: fixed;
+		bottom: 0;
+	}
+	
+	.container1 {
+		padding: 2rem 0;
+	}
+	
+	button.submit {
+		width: 100%;
+	}
+	
+	button.opt-out {
+		bottom: 0;
+		left: 5%;
+	}
+}
+
+@media (min-width: 680px) {
+	
+	.floating-container {
+		background: url('../img/shutterstock_101815531.jpg') no-repeat center; 
+		background-size: 100%; 
+		background-position: center 6rem;
+		background-color: #fff;
+	}
+	
+	.container1 {
+		padding: 2rem 0 2.5rem;
+		font-size: 1.3rem;
+		height: 460px;
+	}
+	
+	.container1 h1 {
+		font-size: 2.5rem;
+	}
+	
+	form {
+		background:  transparent; 
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	legend {
+		width: 70%;
+	}
+	
+	.floating-container {
+		position: fixed;
+		top: 20%;
+		height: 420px;
+		width: 100%;
+		z-index: 1;
+		background-size: 40%; 
+		background-position: center bottom;
+	}
+	
+	.container2 {
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin-right: 2%;
+		width: 380px;
+	}
+	
+	button.opt-out {
+		bottom: 2rem;
+		left: 5%;
+	}
+}
+	
+/* ================================= 
+  Error Messages
+==================================== */
+
+.error {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	color: red; 
+	margin-top: -1rem;
+}
 
