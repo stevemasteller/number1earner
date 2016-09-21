@@ -351,7 +351,7 @@ input {
 	margin-bottom: 1.125rem;	
 	font-size: 1rem;
 	font-weight: 500;
-	padding: .8em;
+	padding: .8rem;
 	background: #c5c5c5;			
 	border: 2px solid #535353;
 	outline: none;
@@ -455,9 +455,18 @@ button.opt-out:hover {
 	}
 	
 	.container1 {
+		font-size: 0.875em;
 		padding: 2rem 0;
 	}
 	
+	.container1 h1 {
+		font-size: 1.5rem;
+	}
+	
+	.container2 {
+		position: relative;
+	}
+		
 	button.submit {
 		width: 100%;
 	}
@@ -465,6 +474,22 @@ button.opt-out:hover {
 	button.opt-out {
 		bottom: 0;
 		left: 5%;
+	}
+	
+	.container2 label {
+		display: none;
+	}
+	
+	#name-error {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+	}
+
+	#mail-error {
+		position: absolute;
+		top: 6rem;
+		left: 2rem;
 	}
 }
 
@@ -475,16 +500,19 @@ button.opt-out:hover {
 		background-size: 100%; 
 		background-position: center 6rem;
 		background-color: #fff;
+		border-top: 1px solid #333;
+		border-bottom: 1px solid #333;
 	}
 	
 	.container1 {
-		padding: 2rem 0 2.5rem;
-		font-size: 1.3rem;
+		padding: 1.5rem 0 0 0;
+		font-size: 1.25rem;
 		height: 460px;
 	}
 	
 	.container1 h1 {
-		font-size: 2.5rem;
+		font-size: 3rem;
+		line-height: 2rem;
 	}
 	
 	form {
@@ -518,7 +546,19 @@ button.opt-out:hover {
 	
 	button.opt-out {
 		bottom: 2rem;
-		left: 5%;
+		left: 3rem;
+	}
+	
+	#name-error {
+		position: absolute;
+		top: 2rem;
+		right: 7rem;
+	}
+
+	#mail-error {
+		position: absolute;
+		top: 6rem;
+		right: 5rem;
 	}
 }
 	
@@ -527,10 +567,9 @@ button.opt-out:hover {
 ==================================== */
 
 .error {
-	margin-left: 0;
-	margin-right: 0;
+	margin: 0;
 	padding: 0;
+	line-height: 0rem;
 	color: red; 
-	margin-top: -1rem;
 }
 

@@ -15,13 +15,13 @@ var clearDisplayErrors = function() {
 
 // brute force the display of each error message
 var displayNameError = function() {
-	var $newP = $('<p class="error">Name required</p>');
+	var $newP = $('<p id="name-error" class="error">Name required</p>');
 	
 	$('#name').after($newP);
 };
 
 var displayEmailError = function() {
-	var $newP = $('<p class="error">Valid email required</p>');
+	var $newP = $('<p id="mail-error" class="error">Valid email required</p>');
 	
 	$('#mail').after($newP);	
 };
