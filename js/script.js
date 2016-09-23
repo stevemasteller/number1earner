@@ -101,7 +101,7 @@ $('button.opt-out').click( function() {
 /*****************************************
 * implement Squeeze Page
 *****************************************/
-const TIMEOUT_IN_SECONDS = 15; // three minutes
+const TIMEOUT_IN_SECONDS = 180; // three minutes
 var timeout;					// holds timeout counter
 
 // When timeout triggers
