@@ -238,6 +238,7 @@ ol {
 	bottom: 0;
 	background-color: #000;
 	width: 100%;
+	z-index: 1;
 }
 
 .site-logo {
@@ -343,7 +344,8 @@ label {
 	padding-right: 1rem;
 }
 
-input {
+input,
+textarea {
 	margin-bottom: 1.125rem;	
 	font-size: 1rem;
 	font-weight: 500;
@@ -353,7 +355,8 @@ input {
 	outline: none;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
 	background: #fff;
 	border-color: #535353; 
 	transition: border-color .4s, background-color .4s;
@@ -361,6 +364,11 @@ input:focus {
 
 input[type="text"] {
 	display: inline-block;
+}
+
+textarea {
+	width: 100%;
+	height: 200px;
 }
 
 button.submit {
@@ -377,6 +385,28 @@ button.submit:hover {
 img {
 	display: block;
 	width: 100%;
+}
+
+/* ================================= 
+  Contact page
+==================================== */
+.container {
+	width: 680px;
+	margin-left: 10%;
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container textArea {
+	width: 80%;
+}
+
+.wrapper-beach {
+	position: relative;
 }
 
 /* ================================= 
@@ -516,8 +546,7 @@ button.opt-out:hover {
 	}
 	
 	input[type="text"],
-	input[type="email"],
-	legend {
+	input[type="email"] {
 		width: 70%;
 	}
 	
@@ -526,7 +555,7 @@ button.opt-out:hover {
 		top: 15%;
 		height: 70vh;
 		width: 100%;
-		z-index: 1;
+		z-index: 2;
 		background-size: 45%; 
 		background-position: center bottom;
 	}
