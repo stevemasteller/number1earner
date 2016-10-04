@@ -390,23 +390,33 @@ img {
 /* ================================= 
   Contact page
 ==================================== */
-.container {
-	width: 680px;
-	margin-left: 10%;
-	text-align: right;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+/* ================================= 
+  Contact Page Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 679px) {
 }
 
-.container input[type="text"],
-.container input[type="email"],
-.container textArea {
-	width: 80%;
-}
 
-.wrapper-beach {
-	position: relative;
+	@media (min-width: 680px) {
+	.container {
+		width: 580px;
+		margin-left: 10%;
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	.container input[type="text"],
+	.container input[type="email"],
+	.container textArea {
+		width: 80%;
+	}
+
+	.wrapper-beach {
+		position: relative;
+	}
 }
 
 /* ================================= 
