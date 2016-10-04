@@ -69,7 +69,7 @@ var displaySqueezePage = function() {
 }
 
 // Event handler for form submit input verification
-$('form').on('click', 'button[type="submit"]', function($event) {
+$('form').on('click', '#squeeze-submit', function($event) {
 	
 	var isError;
 	
