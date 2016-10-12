@@ -30,7 +30,7 @@
 			$errorMessage = "<div id=\"alertHeader\" class=\"alert alert-danger\" role=\"alert\"><p><strong>There were error(s) in your form: </strong></p>" . $errorMessage . "</div>";
 		} else {
 			
-			$emailTo = "stevermasteller@gmail.com";
+			$emailTo = "triple3crown@gmail.com";
 			$subject = $_POST["subject"];
 			$content = "From: ".$_POST["name"].": ".$_POST["textArea"];
 			$headers = "From: ".$_POST["email"];
