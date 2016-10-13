@@ -56,13 +56,16 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400" rel="stylesheet" type="text/css"> 	
+	<script src="https://use.fontawesome.com/c3545e1b17.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
 	<!-- start header -->
 	<header class="main-header accordian">
-		<button class="site-logo" type="button">NUMBER1EARNER.com</button>
+		<button class="site-logo" type="button">
+			<i class="fa fa-bars"></i>
+		</button>
 		
 		<ul class="nav">
 			<li><a href="#">Top</a></li>
