@@ -407,6 +407,22 @@ img {
 	display: block;
 	width: 100%;
 }
+/* ================================= 
+  Form Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 679px) {
+
+	fieldset {
+		margin-top: 0rem;
+	}
+}
+
+
+@media (min-width: 680px) {
+
+}
+
 
 /* ================================= 
   Contact page
@@ -419,7 +435,7 @@ img {
 }
 
 
-	@media (min-width: 680px) {
+@media (min-width: 680px) {
 	.container {
 		width: 580px;
 		margin-left: 10%;

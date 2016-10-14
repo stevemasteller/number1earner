@@ -95,32 +95,20 @@ $('form').on('click', '#squeeze-submit', function($event) {
 // event handler for opt-out button on squeeze page
 $('button.opt-out').click( function() {
 	$('.floating-container').css('display', 'none');
-	timeoutInit();
 });
 
 /*****************************************
 * implement Squeeze Page
 *****************************************/
-const TIMEOUT_IN_SECONDS = 120; // two minutes
-var timeout;					// holds timeout counter
-
-// When timeout triggers
-//		display squeez page
-//		restart the timeout counter
-var timeoutTrigger = function() {
-    displaySqueezePage();
-}
-
-// Start the timeout counter
-var timeoutInit = function() {
-    timeout = setTimeout('timeoutTrigger()', TIMEOUT_IN_SECONDS * 1000);
- }
-
-// Clear the timeout counter
-//		timeout is a global variable
-var timeoutClear = function() {
-    clearTimeout(timeout);
-}
+var once = true;
+$(document).on('scroll', function() {
+	if  ($(document).scrollTop() >= 1100) {
+		if (once) {
+			once = false;
+			displaySqueezePage();
+		}
+	}
+});
 
 /*****************************************
 * Implement NavBar Accordian
@@ -144,7 +132,5 @@ $('.site-logo').click( function () {
 /*****************************************
 * on load
 *****************************************/
-timeoutInit();
-
 
 /*})(jQuery);*/
