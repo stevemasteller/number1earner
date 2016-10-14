@@ -494,6 +494,7 @@ button.opt-out:hover {
 
 .floating-container {
 	display: none;
+	z-index: 2;
 }
 
 /* ================================= 
@@ -533,9 +534,6 @@ button.opt-out:hover {
 		left: 5%;
 	}
 	
-	.container2 label {
-		display: none;
-	}
 	
 	#name-error {
 		position: absolute;
@@ -586,7 +584,6 @@ button.opt-out:hover {
 		top: 15%;
 		height: 70vh;
 		width: 100%;
-		z-index: 2;
 		background-size: 45%; 
 		background-position: center bottom;
 	}
